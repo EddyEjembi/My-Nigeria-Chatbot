@@ -3,6 +3,9 @@ from rag import Agent
 
 agent = Agent()
 
+# Page styling
+st.set_page_config(page_title="My Naija Bot", page_icon="🤖")
+
 def chat(message):
     # Create a single string from the history, concatenating each message
     conversation = "\n".join([f"{message['role']}: {message['content']}" for message in message])
@@ -32,7 +35,8 @@ def show_citation(citations):
             st.markdown(f"{citation_value} - [View Source](https://github.com/EddyEjembi/My-Nigeria-Chatbot/tree/main/My%20Nigeria)")
 
 # Set the title of the app
-st.title("Nigeria Knowledge Bot")
+st.title("My Naija Knowledge Bot")
+st.image("./assets/nigeria.svg", width=600) #use_container_width=True)
 
 # Initialize chat history
 if "chat_history" not in st.session_state:
