@@ -29,7 +29,7 @@ def show_citation(citations):
     with st.expander("Reference"):
         for citation_key, citation_value in unique_citations.items():
             # Make the source clickable if it's a URL or file path
-            st.markdown(citation_value)
+            st.markdown(f"{citation_value} - [View Source](https://github.com/EddyEjembi/My-Nigeria-Chatbot/tree/main/My%20Nigeria)")
 
 # Set the title of the app
 st.title("Nigeria Knowledge Bot")
